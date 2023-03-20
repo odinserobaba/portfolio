@@ -1,1 +1,16 @@
-Hello blog!!! Test!
+<h1>THIS IS MY BLOG</h1>
+
+{% for blog in blogs %}
+
+
+    <h2>{{ blog.title }}</h2>
+    <p>{{ blog.description }}</p>
+    <p>{{ blog.data }}</p>
+    {% if blog.url %}
+        <a href="{{ blog.url }}">Link</a>
+    {% endif %}
+
+
+{% endfor %}
+<a href="\home"> Home </a>
+<a href="\about"> ABOUT </a>
