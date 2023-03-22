@@ -3,9 +3,9 @@
 {% for blog in blogs %}
 
 
-    <h2>{{ blog.title }}</h2>
+    <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+    <p><h5>{{ blog.date }}</h5></p>
     <p>{{ blog.description }}</p>
-    <p>{{ blog.data }}</p>
     {% if blog.url %}
         <a href="{{ blog.url }}">Link</a>
     {% endif %}
