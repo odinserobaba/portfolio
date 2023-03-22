@@ -1,6 +1,8 @@
 <h1>THIS IS MY HOMEPAGE</h1>
-
 {% load static %}
+
+<a href="{% static 'portfolio/test.pdf' %}"">TEST PDF</a>
+
 <img src="{% static 'portfolio/static.jpg' %}">
 
 {% for project in projects %}
@@ -15,5 +17,5 @@
 
 
 {% endfor %}
-<a href="\blog"> BLOG </a>
+<a href="{% url 'blog:all_blogs' %}"> BLOG </a>
 <a href="\about"> ABOUT </a>

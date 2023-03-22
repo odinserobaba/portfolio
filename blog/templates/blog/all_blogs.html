@@ -1,11 +1,11 @@
 <h1>THIS IS MY BLOG</h1>
-
+<h2>BLOG COUNT {{ blogs.count }} POST{{ blogs.count|pluralize }}</h2>
 {% for blog in blogs %}
 
 
     <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
-    <p><h5>{{ blog.date }}</h5></p>
-    <p>{{ blog.description }}</p>
+    <p><h5>{{ blog.date|date:'M d y'|upper }}</h5></p>
+    <p>{{ blog.description|safe|truncatechars:50 }}</p>
     {% if blog.url %}
         <a href="{{ blog.url }}">Link</a>
     {% endif %}
