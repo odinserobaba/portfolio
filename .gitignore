@@ -1,0 +1,8 @@
+*.log
+*.pot
+*.pyc
+personal_portfolio/__pycache__/
+blog/__pycache__/
+portfolio/__pycache__/
+personal_portfolio/local_settings.py
+/static/
